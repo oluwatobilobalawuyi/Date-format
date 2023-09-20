@@ -59,6 +59,7 @@ int getNumberOfDays(int month, int year)
 		return 30;
 		break;
 	}
+	return 0;
 }
 
 //function to validate the date
@@ -80,6 +81,7 @@ bool validateDate(int day, int month, int year)
 		if (day < 1 || day > num_days)
 			throw invalidDay();
 	}
+	return true;
 }
 
 //main function
@@ -103,7 +105,7 @@ int main()
 		validateDate(day, month, year);
 
 		//Display output
-		cout << "\nDate of Birth " << months[month - 1] << " " << day << "," << year << endl;
+		cout << "\nYour date is: " << months[month - 1] << " " << day << "," << year << endl;
 	}
 
 	//Catch statement for invalid day
